@@ -1,0 +1,50 @@
+	a{
+            outline: 0;
+	    text-decoration: none;
+        }
+        a
+        .logo{
+            padding-top: 6px;
+        }
+        a,p,option,label{
+            font-family: 'Livvic', sans-serif;
+        }
+        h3,h5{
+            font-family: 'Nixie One', cursive; 
+        }
+        .btn{
+            background-color: #9b65a9;
+            border-radius: 25px;
+	    margin : 5px 5px;
+        }
+        .btn:hover{
+            background-color: #bca0dc;
+            transition: 0.5s ease-out;
+        }
+        .text{
+            color: #ffffff;
+        }
+        .text:hover{
+            color: #bca0dc;
+            background-color: transparent;
+            transition: 0.5s ease-out;
+        }
+        @charset "UTF-8";
+        /* Reset */
+        *:before, *:after {
+          content: '';
+        }
+
+        hr {
+          border: 0;
+          margin: 1.35em auto;
+          max-width: 100%;
+          background-position: 50%;
+          box-sizing: border-box;
+        }
+        .fade-2 {
+          border-width: 0 0 1px;
+          color: #9b65a9;
+          border-image: linear-gradient(90deg, rgba(135, 206, 235, 0), #9b65a9 50%, rgba(135, 206, 235, 0) 100%) 0 0 100%;
+          border-style: solid;
+        }

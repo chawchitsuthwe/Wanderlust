@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wanderlust</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="Link Files/wanderlustcss.css">
+    <link rel="stylesheet" type="text/css" href="Link Files/materialize.css" />
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="Link Files/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+    <script src="Link Files/search.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function() {
+			$(window).scroll(function() {
+
+        		var height = $('.navbar').height();
+        		var scrollTop = $(window).scrollTop();
+
+        		if (scrollTop >= height - 40) {
+            		$('.navbar').addClass('solid-nav');
+        		} else {
+            		$('.navbar').removeClass('solid-nav');
+        		}
+    		});
+		});
+    </script>
+</head>
+<body>
+    <header></header>
+    <!--the navbar items such as HOTELS,RESTAURANTS are needed to be fixed as the hover color are too sample. Try to find color that would match with the theme of our website-->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light grey darken-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.php"> <img class="logo" src="images/logo.png" height="50px" style="margin-bottom: -20px; margin-top: -40px"> </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="material-icons">menu</i></a>
+            </button>
+           
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link white-text" href="#">Cities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link white-text" href="#">Hotels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link white-text" href="#">Restaurants</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link white-text" href="#">Transportation</a>
+                    </li>
+                </ul>
+                <a href='getstarted.html' class="waves-effect waves-light btn btn purple lighten-3" >Log In</a>
+            </div>
+        </div>
+    </nav>
+<!-- SEARCH BOXES  -->
+<div class="container">
+    <div class="row">
+        <div class="input-field col offset-s6">
+             <label>Your Destination</label><br><br>
+                <select class="browser-default">
+                        <option value="1">Yangon</option>
+                        <option value="2">Mandalay</option>
+                        <option value="3">Inlay</option>
+                        <option value="4">Ngapali</option>
+                        <option value="5">Bagan</option>
+                        <option value="6">Kalaw</option>
+                </select>
+       </div>
+    </div>
+        <div class="row">
+            <div class="col s6 offset-s6">
+                    <form>
+                        <div class="input-field">
+                            <input id="search_hotel" type="text" class="validate">
+                            <label for="search_hotel">Search by Hotel Name</label>
+                        </div>
+                    </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 offset-s6">
+                    <form>
+                        <div class="input-field">
+                            <input id="search_hotel" type="text" class="validate">
+                            <label for="search_hotel">Search by Restaurant Name</label>
+                        </div>
+                    </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 offset-s6">
+                    <form>
+                        <div class="input-field">
+                            <input id="search_hotel" type="text" class="validate">
+                            <label for="search_hotel">Search by Transportation Line Name</label>
+                        </div>
+                    </form>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col s6 offset-s6">
+        <button class="btn waves-effect waves-light black-text purple lighten-3" type="submit" name="search">Search<i class="material-icons right">search</i>
+        </button>
+        </div>
+        </div>
+    </div>
+</div>
+ 
+<!-- IMAGE CARDS  -->
+<br><div class="container">
+    <h3 align="center">Top Destinations</h3><br>
+ <div class="row">
+    <div class="col s1 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="ImageForWanderlust/1.jpg" height="100px">
+        </div>
+        <div class="card-action">
+          <a href="#">Yangon</a>
+        </div>
+      </div>
+    </div>
+    <div class="col s1 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="ImageForWanderlust/22.jpg" height="100px">
+        </div>
+        <div class="card-action">
+          <a href="#">Mandalay</a>
+        </div>
+      </div>
+    </div>      
+    <div class="col s1 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="ImageForWanderlust/555.jpg" height="100px">
+        </div>
+        <div class="card-action">
+          <a href="#">Inlay</a>
+        </div>
+      </div>
+    </div>
+    <div class="col s1 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="ImageForWanderlust/66.jpg" height="100px">
+        </div>
+        <div class="card-action">
+          <a href="#">Ngapali</a>
+        </div>
+      </div>
+    </div>
+    <div class="col s1 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="ImageForWanderlust/111.jpg" height="100px">
+        </div>
+        <div class="card-action">
+          <a href="#">Bagan</a>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>           
+
+
+<!-- FOOTER -->	
+	<footer class="page-footer grey darken-4">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col s4">
+    				<h6 class="yellow-text lighten-5">About Us</h6>
+                    <p>This web platform is a project by fourth year CEIT students.</p>
+    			</div>
+
+    			<div class="col s4">
+                    <h6 class="yellow-text lighten-5">Links</h6>
+    				<ul>
+    					<li><a class="white-text text-lighten-3" href="#">Home</a></li>
+                        <li><a class="white-text text-lighten-3" href="#">Cities</a></li>
+    					<li><a class="white-text text-lighten-3" href="#">Hotels</a></li>
+    					<li><a class="white-text text-lighten-3" href="#">Restaurants</a></li>
+    					<li><a class="white-text text-lighten-3" href="#">Transportation</a></li>
+    				</ul>
+    			</div>
+
+                <div class="col s4">
+                    <h6 class="yellow-text lighten-5">Follow us on..</h6>
+                    <ul>
+                        <li><img src="images/facebook.png" width="30px" height="30px"></li> <br>
+                        <li><img src="images/instagram.png" width="30px" height="30px"></li><br>
+                        <li><img src="images/twitter.png" width="30px" height="30px"></li>                    
+                    </ul>
+                </div>
+
+                <div class="col s4">
+                    <h6 class="yellow-text lighten-5">Contact us</h6>
+                        <p>  Email : wanderlust.mm@gmail.com 
+                        <br> Phone No : +95 9 973-123-007
+                        <br> Address : 21(A), Insein Road, Insein Township, Yangon, Myanmar</p>
+                </div>
+    	</div>
+        <div class="footer-copyright">
+                <div class="container">
+                    <p>Copyright &copy; Wanderlust 2019</p>
+                </div>
+            </div>
+    </footer>
+
+</body>
+</html>

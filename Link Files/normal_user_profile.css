@@ -1,0 +1,22 @@
+li a{
+            text-decoration: none;
+        }
+        .parallax-container{
+            height: 300px;
+        }
+        .profile{
+            margin-top: 50px;
+        }
+        h4,h5{
+            font-family: 'Nixie One', cursive; 
+        }
+        #fixedbutton1{
+            position: fixed;
+            bottom: 10px;
+            right: 130px;
+        }
+		#fixedbutton2{
+            position: fixed;
+            bottom: 10px;
+            right: 20px;
+        }

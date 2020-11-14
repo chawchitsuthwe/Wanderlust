@@ -1,0 +1,10 @@
+<?php
+	session_start();
+	unset($_SESSION['email']);
+	unset($_SESSION['pwd']);
+	unset($_SESSION['name']);
+	unset($_SESSION['bio']);
+	unset($_SESSION['businessType']);
+	unset($_SESSION['user_type']);
+	header("Location:index.php");
+?>

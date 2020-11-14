@@ -1,0 +1,13 @@
+.card-panel{
+    margin-top: 80px;
+    width: 500px;
+}
+.middle {
+    position: absolute;
+    top: 20%;   
+    text-align: center;
+}
+
+.row,.col-md-4{
+	margin-top: 10px;
+}

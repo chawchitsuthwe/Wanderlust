@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Your Profile</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="wanderlustcss.css">
+
+    <style type="text/css">
+        .navbar{
+            background-color: #d6246b;
+        }
+        #background{
+            background-image: url('images/gradientbg.png');
+            background-position: center;
+            height: auto;
+            background-size:cover;
+            transition: .5s ease;
+        }
+        #profilepic{
+            margin: 80px 0px 10px 0px;
+            width: 150px;
+            height: 150px;
+            transition: .5s ease;
+        }
+        #index{
+            margin: 50px 0px 10px 0px;
+        }
+
+        #fixedbutton{
+            position: fixed;
+            bottom: 10px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.php"><img src="images/logosample.png" width="80px" height="80px" style="margin-bottom: -20px; margin-top: -20px"></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="images/menu.png" width="40px" height="40px">
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HOTELS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">RESTAURANTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">TRANSPORTATIONS</a>
+                    </li>
+                
+                </ul>
+
+                <a href='normal_user_profile.php'><button class='btn btn_active'>chawchit</button></a>
+                <a href='logout.php'><button class='btn'>Log Out</button></a>
+            </div>
+        </div>
+    </nav>
+    <div id="index" align="center">
+        <div id="background">
+            <img src='images/profile.png' id='profilepic'>
+            <h2 style='padding-bottom: 30px;'>Your Name</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Bio</h3>
+				<p style='padding-bottom: 10px;'>Hello you know who I am.</p>
+            </div>
+            <div class="col-md-6" align="center" style="margin-bottom: 50px;">
+                <button type="button" class='btn' data-toggle="modal" data-target="#editprofile">Edit Profile</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="editprofile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Edit Profile</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form method="POST" action="function/normal_user_edit_profile.php" enctype="multipart/form-data">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+									<input type='text' class='form-control' name='name' value='Your Name'>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bio">Bio</label>
+									<textarea class='form-control' name='bio' rows='5'>You know who I am.</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="profilephoto">Profile Photo</label>
+                                    <input type="file" class="form-control-file" name="profilephoto" accept="image/*">
+                                </div>
+                                <div class="form-group">
+                                    <label for="coverphoto">Cover Photo</label>
+                                    <input type="file" class="form-control-file" name="coverphoto" accept="image/*">
+                                </div>
+                                
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn" data-dismiss="modal">Close</button>
+                                <input type="submit" class="btn" value="Save Changes">
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class='btn' data-toggle="modal" data-target="#accountsetting">Account Setting</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="accountsetting" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Account Setting</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form method="POST" action="function/normal_user_account_setting.php">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="name">Email</label>
+                                    <label class="form-control">chawchit@wanderlust.com</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="newpwd">New Password</label>
+                                    <input type="text" class="form-control" name="newpwd">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cpwd">Current Password</label>
+                                    <input type="text" class="form-control" name="cpwd">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn" data-dismiss="modal">Close</button>
+                                <input type="submit" class="btn" value="Save Changes">
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!--save items-->
+		<div class="row">
+			<div class="col-md-6">
+				<h3>Saved</h3>
+				<p>...</p>
+			</div>
+		</div> 
+    </div>
+	<footer>
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-3">
+    				<img src="images/logosample.png" width="150px" height="150px">
+    			</div>
+    			<div class="col-md-3">
+    				<ul>
+    					<li>
+    						<a href="#">Home</a>
+    					</li>
+    					<li>
+    						<a href="#">Hotels</a>
+    					</li>
+    					<li>
+    						<a href="#">Restaurants</a>
+    					</li>
+    					<li>
+    						<a href="#">Trasnportations</a>
+    					</li>
+    				</ul>
+    			</div>
+    			<div class="col-md-3">
+    				<h2>FOLLOW US</h2>
+    				<img src="images/facebook.png" width="30px" height="30px">
+    				<img src="images/instagram.png" width="30px" height="30px">
+    				<img src="images/twitter.png" width="30px" height="30px">
+    			</div>
+    			<div class="col-md-3">
+    				<h2>CONTACT US</h2>
+    				<p>Email : wanderlust2019@gmail.com 
+    					<br> Phone No : +95 9 12345678
+    					<br> Address : 123, Blah Blah Street, Blah Blah Township, Yangon, Myanmar</p>
+    			</div>
+    		</div>
+    		<div class="row">
+    			<div class="col-md-12">
+    				<p>Copyright &copy; Wanderlust 2019</p>
+    			</div>
+    		</div>
+    	</div>
+    </footer>
+
+</body>
+</html>
